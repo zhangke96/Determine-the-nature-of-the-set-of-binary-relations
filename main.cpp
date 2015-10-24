@@ -1,10 +1,3 @@
-/*************************************************************************
-    > File Name: 离散实验二.cpp
-    > Author: zhangke
-    > Mail: ch.zhangke@gmail.com 
-    > Created Time: 2015年10月18日 星期日 09时58分26秒
- ************************************************************************/
-
 #include<iostream>
 #include<vector>
 #include<ctime>
