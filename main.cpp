@@ -11,7 +11,7 @@ int main()
 	vector<char> a;                    //用来保存读入的集合
 	int a_size=0;                        //用来保存读入集合的元素个数
 	char a_temp;                       //用来保存接下来要读入的集合
-	cout<<"请输入集合,按ctrl+z结束输入"<<endl;
+	cout<<"请输入集合,windows下请按ctrl+z结束输入,linux下请按ctrl+d结束输入"<<endl;
 	while(cin>>a_temp)
 	{
 		a.push_back(a_temp);
@@ -19,7 +19,11 @@ int main()
 	}
 	cin.clear();
 	cout<<"集合为"<<endl;
-	int relation[a_size][a_size];
+	//int relation[a_size][a_size];         vs里面不支持,需要换成动态数组
+	int **relation;
+	relation=(int **)malloc(sizeof(int *)*a_size);
+	for(int k=0;k<a_size;++k)
+		*(relation+k)=(int *)malloc(sizeof(int)*a_size);
 	for(int k=0;k<a_size;++k)
 	{
 		for(int l=0;l<a_size;++l)
